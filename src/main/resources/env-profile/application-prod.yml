@@ -1,0 +1,16 @@
+#数据源配置
+druid:
+  datasource:
+    url: jdbc:mysql://47.104.195.111:3306/ibos?useUnicode:true&amp;characterEncoding:UTF8&amp;allowMultiQueries:true&amp;rewriteBatchedStatements:true&amp;zeroDateTimeBehavior:convertToNull
+    username: pinsoonprod
+    password: pinsoonprod001!
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initial-size: 100
+    max-active: 500
+    min-idle: 100
+
+mybatis:
+  page-helper:
+    dialect: mysql
+  mapper-locations: classpath*:mapper/*Mapper.xml

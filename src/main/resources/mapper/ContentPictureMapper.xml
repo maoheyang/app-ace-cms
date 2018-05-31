@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ace.cms.mapper.ContentPictureMapper">
+
+  <select id="getPicArr" resultType="com.ace.cms.entity.content.PicArr">
+    SELECT
+	  img_path as picPaths,
+	  description as picDescs
+    FROM
+        jc_content_picture
+    WHERE
+        content_id = #{contentId,jdbcType=BIGINT}
+    ORDER by priority
+    LIMIT 2
+  </select>
+</mapper>

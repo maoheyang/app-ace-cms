@@ -1,0 +1,23 @@
+project.name: app-ace-cms
+spring.profiles.active: @profiles.active@
+server.port: 9082
+server.contextPath: /cms/api/front
+
+spring:
+  cas:
+    server-name: http://localhost:8090
+    validate-filters: /*  
+    sign-out-filters: /logout  
+    cas-server-url-prefix: http://122.112.2.54:8089/cas/ 
+    use-session: true  
+    redirect-after-validation: true  
+    auth-filters: /*  
+    request-wrapper-filters: /*  
+    cas-server-login-url: http://122.112.2.54:8089/cas/login  
+    assertion-filters: /*  
+
+
+whiteListUsers: "18321879503,13222059661,18516516322,15036631510,13775617313,\
+18501211291,18516240944,18800353683,13764481990,15001749373,18516530326,\
+18221203905,18817510185,15552881870,15021946160,15921211779,18969026186,\
+18017974887,13671814998,13764545612,18918562809,15800690243,18255813551"
